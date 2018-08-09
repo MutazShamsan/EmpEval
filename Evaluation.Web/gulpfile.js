@@ -20,12 +20,14 @@ var gulp = require("gulp"),
 
 var vendorStyles = [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/mdbootstrap/css/mdb.min.css",
     "./wwwroot/css/site.css"
 ];
 var vendorScripts = [
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/popper.js/dist/umd/popper.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "node_modules/mdbootstrap/js/mdb.min.js",
     "node_modules/datatables.net/js/jquery.dataTables.min.js"
 ];
 
