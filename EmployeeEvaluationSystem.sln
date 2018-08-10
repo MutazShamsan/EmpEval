@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation.Models", "Evaluation.Models\Evaluation.Models.csproj", "{DFBC80D2-20A6-4254-B7D5-8171659242D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evaluation.Models", "Evaluation.Models\Evaluation.Models.csproj", "{DFBC80D2-20A6-4254-B7D5-8171659242D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation.Web", "Evaluation.Web\Evaluation.Web.csproj", "{AE99E6DE-B5B6-4DD4-8C4E-3C90DE281584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evaluation.Web", "Evaluation.Web\Evaluation.Web.csproj", "{AE99E6DE-B5B6-4DD4-8C4E-3C90DE281584}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation.DataContextBase", "Evaluation.DataContextBase\Evaluation.DataContextBase.csproj", "{EA886888-7CD3-4AD4-992D-F20CBC11F89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation.Interfaces", "Evaluation.Interfaces\Evaluation.Interfaces.csproj", "{B48F184D-2EED-422E-BF8B-3AFA6139D0DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluataion.DataContext.Sql", "Evaluataion.DataContext.Sql\Evaluataion.DataContext.Sql.csproj", "{9CE31E72-E8EC-4EA7-9469-F4E7A6586770}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{AE99E6DE-B5B6-4DD4-8C4E-3C90DE281584}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE99E6DE-B5B6-4DD4-8C4E-3C90DE281584}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE99E6DE-B5B6-4DD4-8C4E-3C90DE281584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA886888-7CD3-4AD4-992D-F20CBC11F89D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA886888-7CD3-4AD4-992D-F20CBC11F89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA886888-7CD3-4AD4-992D-F20CBC11F89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA886888-7CD3-4AD4-992D-F20CBC11F89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48F184D-2EED-422E-BF8B-3AFA6139D0DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48F184D-2EED-422E-BF8B-3AFA6139D0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48F184D-2EED-422E-BF8B-3AFA6139D0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48F184D-2EED-422E-BF8B-3AFA6139D0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE31E72-E8EC-4EA7-9469-F4E7A6586770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE31E72-E8EC-4EA7-9469-F4E7A6586770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE31E72-E8EC-4EA7-9469-F4E7A6586770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE31E72-E8EC-4EA7-9469-F4E7A6586770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,6 +10,14 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\font\roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\font\roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\font\roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\font\roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\font\roboto\Roboto-Thin.woff2" />
+  </ItemGroup>
+
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="node_modules\.bin\gulp.cmd" />
   </Target>

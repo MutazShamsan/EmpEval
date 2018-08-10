@@ -21,9 +21,18 @@ var gulp = require("gulp"),
 var vendorStyles = [
     "node_modules/bootstrap/dist/css/bootstrap.min.css",
     "node_modules/mdbootstrap/css/mdb.min.css",
+    "node_modules/mdbootstrap/css/style.min.css",
     "./wwwroot/css/site.css"
 ];
 var vendorScripts = [
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/popper.js/dist/umd/popper.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "node_modules/mdbootstrap/js/mdb.min.js",
+    "node_modules/datatables.net/js/jquery.dataTables.min.js"
+];
+
+var vendorFonts = [
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/popper.js/dist/umd/popper.min.js",
     "node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -43,6 +52,12 @@ gulp.task('build-vendor-css', () => {
 
 gulp.task('build-vendor-js', () => {
     return gulp.src(vendorScripts)
+        .pipe(concat('vendor.min.js'))
+        .pipe(gulp.dest('wwwroot'));
+});
+
+gulp.task('build-vendor-font', () => {
+    return gulp.src(vendorFonts)
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest('wwwroot'));
 });
