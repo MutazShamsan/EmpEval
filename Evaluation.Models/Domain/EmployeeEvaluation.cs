@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Evaluation.Models.Domain
 {
-    class EmployeeEvaluation : BaseModel, IAuditable, IEntity
+    public class EmployeeEvaluation : BaseModel, IAuditable, IEntity
     {
         public int VoterEmployeeId { get; set; }
         public int EvaluatedEmployeeId { get; set; }

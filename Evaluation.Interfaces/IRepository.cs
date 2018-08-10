@@ -10,13 +10,13 @@ namespace Evaluation.Interfaces
         Task AddAsync(T source);
         Task AddRangeAsync(IEnumerable<T> source);
 
-        Task UpdateAsync(T source);
-        Task UpdateRangeAsync(IEnumerable<T> source);
+        void UpdateAsync(T source);
+        void UpdateRangeAsync(IEnumerable<T> source);
 
-        Task RemoveAsync(T source);
-        Task RemoveRangeAsync(IEnumerable<T> source);
+        void RemoveAsync(T source);
+        void RemoveRangeAsync(IEnumerable<T> source);
 
-        Task<IQueryable<T>> SelectAsync();
+        IQueryable<T> SelectAsync();
 
         Task<bool> Commit();
     }
