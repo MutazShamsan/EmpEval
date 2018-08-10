@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluation.Interfaces", "Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluataion.DataContext.Sql", "Evaluataion.DataContext.Sql\Evaluataion.DataContext.Sql.csproj", "{9CE31E72-E8EC-4EA7-9469-F4E7A6586770}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{2AE4E7B3-8D9F-4011-A9C2-5900D577CAE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DFBC80D2-20A6-4254-B7D5-8171659242D4} = {2AE4E7B3-8D9F-4011-A9C2-5900D577CAE7}
+		{EA886888-7CD3-4AD4-992D-F20CBC11F89D} = {2AE4E7B3-8D9F-4011-A9C2-5900D577CAE7}
+		{9CE31E72-E8EC-4EA7-9469-F4E7A6586770} = {2AE4E7B3-8D9F-4011-A9C2-5900D577CAE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD0C572F-DF16-4DDA-BC52-ACEA611D4829}

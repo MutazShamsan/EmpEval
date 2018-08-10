@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Evaluation.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Evaluation.Models.Domain
 {
-    public class Department: BaseModel, IAuditable
+    public class Department: BaseModel, IAuditable, IEntity
     {       
         public string Name { get; set; }
 

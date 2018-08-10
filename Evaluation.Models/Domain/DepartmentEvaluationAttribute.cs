@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Evaluation.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Evaluation.Models.Domain
 {
-    class DepartmentEvaluationAttribute : BaseModel
+    class DepartmentEvaluationAttribute : BaseModel, IEntity
     {
         public int DepartmentId { get; set; }
         public int EvaluationAttributeId { get; set; }

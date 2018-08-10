@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Evaluation.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Evaluation.Models.Domain
 {
-    class EmployeeEvaluation : BaseModel, IAuditable
+    class EmployeeEvaluation : BaseModel, IAuditable, IEntity
     {
         public int VoterEmployeeId { get; set; }
         public int EvaluatedEmployeeId { get; set; }

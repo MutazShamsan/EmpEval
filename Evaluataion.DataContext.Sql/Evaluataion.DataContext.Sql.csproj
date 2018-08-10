@@ -9,4 +9,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Evaluation.DataContextBase\Evaluation.DataContextBase.csproj" />
+    <ProjectReference Include="..\Evaluation.Interfaces\Evaluation.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>
