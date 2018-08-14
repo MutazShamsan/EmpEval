@@ -10,5 +10,6 @@ namespace Evaluation.IRepository.Domain
     public interface IEmployeeRepository : IRepository<Employee>
     {
         Task<IEnumerable<Employee>> GetAllExceptLoggedInUser(int loggedinId);
+        Task<IEnumerable<Employee>> GetUnvotedEmployees();
     }
 }
