@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Evaluation.DataContextBase;
 using Evaluation.IRepository.Domain;
 using Evaluation.Repository.Domain;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Evaluation.UnitOfWork
 {
@@ -20,14 +21,29 @@ namespace Evaluation.UnitOfWork
             Employees = new EmployeeRepository(_context);
         }
 
-
-        public async Task<int> Complete()
+        public Task<IDbContextTransaction> BeginTransactionAsync()
         {
-            return await _context.SaveChangesAsync();
+            return _context.Database.BeginTransactionAsync();
+        }
+
+        public void CommiTransaction(IDbContextTransaction transaction)
+        {
+            transaction.Commit();
+        }
+
+        public void RollbackTransaction(IDbContextTransaction transaction)
+        {
+            transaction.Rollback();
+        }
+
+        public Task<int> CompleteAsync()
+        {
+            return _context.SaveChangesAsync();
         }
 
         public void Dispose()
         {
+            _context?.Database?.CurrentTransaction?.Dispose();
             _context?.Dispose();
         }
     }

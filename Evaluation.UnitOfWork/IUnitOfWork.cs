@@ -1,4 +1,5 @@
 ﻿using Evaluation.IRepository.Domain;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Evaluation.UnitOfWork
    public interface IUnitOfWork : IDisposable
     {
         IEmployeeRepository Employees { get; }
-        Task<int> Complete();
+        Task<IDbContextTransaction> BeginTransactionAsync();
+        Task<int> CompleteAsync();
     }
 }
