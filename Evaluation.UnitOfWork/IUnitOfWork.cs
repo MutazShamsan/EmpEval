@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Evaluation.UnitOfWork
 {
-   public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         IEmployeeRepository Employees { get; }
         Task<IDbContextTransaction> BeginTransactionAsync();
+        void CommiTransaction(IDbContextTransaction transaction);
+        void RollbackTransaction(IDbContextTransaction transaction);
         Task<int> CompleteAsync();
     }
 }
