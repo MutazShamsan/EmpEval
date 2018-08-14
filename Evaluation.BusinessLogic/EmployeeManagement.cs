@@ -12,26 +12,24 @@ namespace Evaluation.BusinessLogic
 {
     public class EmployeeManagement : LogicBase
     {
+        public EmployeeManagement(AppDataContextBase context) : base(context) { }
 
-        public EmployeeManagement(AppDataContextBase context) : base(context)
-        { }
-
-        public Employee Get(int id)
+        public Employee GetEmployeeById(int id)
         {
             Employee result = null;
 
-            var repo = new AppRepository<Employee>(ApplicationContext);
-            result = repo.SelectAsync().FirstOrDefault(st => st.Id == id);
+            //IRepository<Employee> repo = new RepositoryBase<Employee>(ApplicationContext);
+            //result = repo.SelectAsync().FirstOrDefault(st => st.Id == id);
 
             return result;
         }
 
-        public async Task<List<Employee>> GetAll()
+        public async Task<List<Employee>> GetAllEmployees()
         {
             List<Employee> result = new List<Employee>();
 
-            var repo = new AppRepository<Employee>(ApplicationContext);
-            result = await repo.SelectAsync().ToListAsync();
+            //var repo = new RepositoryBase<Employee>(ApplicationContext);
+            //result = await repo.SelectAsync().ToListAsync();
 
             return result;
         }
