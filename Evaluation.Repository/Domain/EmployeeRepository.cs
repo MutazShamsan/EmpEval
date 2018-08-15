@@ -19,5 +19,16 @@ namespace Evaluation.Repository.Domain
         {
             return await Context.Employees.Where(st => st.Id != loggedinId).ToListAsync();
         }
+
+        public async Task<IEnumerable<Employee>> GetUnvotedEmployees(int loggedinId)
+        {
+            var voted = await GetVotedEmployeeIds(loggedinId);
+            return await Context.Employees.Where(st => !voted.Contains(st.Id)).ToListAsync();
+        }
+
+        public async Task<IEnumerable<int>> GetVotedEmployeeIds(int loggedinId)
+        {
+            return await Context.EmployeeEvaluations.Where(st => st.VoterEmployeeId == loggedinId).Select(st => st.EvaluatedEmployeeId).ToListAsync();
+        }
     }
 }

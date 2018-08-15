@@ -14,8 +14,7 @@ namespace Evaluation.DataContextBase
         public DbSet<EmployeeCommunicationChannel> EmployeeCommunicationChannels { get; set; }
         public DbSet<EmployeeEvaluation> EmployeeEvaluations { get; set; }
         public DbSet<EvaluationAttribute> EvaluationAttributes { get; set; }
-
-
+        
         public AppDataContextBase(DbContextOptions<AppDataContextBase> options) : base(options)
         { }
     }

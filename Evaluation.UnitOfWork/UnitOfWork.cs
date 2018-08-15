@@ -14,11 +14,13 @@ namespace Evaluation.UnitOfWork
         private readonly AppDataContextBase _context;
 
         public IEmployeeRepository Employees { get; private set; }
+        public IEmployeeEvaluationRepository EmployeeEvaluations { get; private set; }
 
         public UnitOfWork(AppDataContextBase context)
         {
             _context = context;
             Employees = new EmployeeRepository(_context);
+            EmployeeEvaluations = new EmployeeEvaluationRepository(_context);
         }
 
         public Task<IDbContextTransaction> BeginTransactionAsync()

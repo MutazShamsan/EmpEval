@@ -10,6 +10,9 @@ namespace Evaluation.UnitOfWork
     public interface IUnitOfWork : IDisposable
     {
         IEmployeeRepository Employees { get; }
+        IEmployeeEvaluationRepository EmployeeEvaluations { get; }
+
+
         Task<IDbContextTransaction> BeginTransactionAsync();
         void CommiTransaction(IDbContextTransaction transaction);
         void RollbackTransaction(IDbContextTransaction transaction);

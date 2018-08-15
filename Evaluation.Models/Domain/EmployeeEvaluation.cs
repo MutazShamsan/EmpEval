@@ -12,6 +12,10 @@ namespace Evaluation.Models.Domain
         public int DepartmentEvaluationAttributeId  { get; set; }
         public int EvaluatedValue { get; set; }
 
+        #region Relations
+        public Employee VoterEmployee { get; set; }
+        #endregion
+
         #region Auditing
         public DateTimeOffset CreatedDate { get; set; }
         public string CreatedBy { get; set; }
